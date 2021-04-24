@@ -1,6 +1,4 @@
-;save the clipboard contents
-old_clip = ClipboardAll
-ClipWait, 2
+slowTime = 25
 
 ; Set a bunch of text variables
 GiantGuild := "GG"
@@ -9,33 +7,26 @@ VSCode := "GG"
 GeneralCB := "GG"
 
 if WinActive("Destiny 2") {
-    clipboard = %Destiny%
-    ClipWait, 0
     Send {Enter}
-    Send ^v
+    SendInput, %Destiny%
+    sleep %slowTime%
     Send {Enter}
 }
 else if WinActive("Guild Wars 2") {
-    clipboard = %GiantGuild%
-    ClipWait, 0
     Send {Enter}
-    Send ^v
+    SendInput, %GiantGuild%
+    sleep %slowTime%
     Send {Enter}
 }
 else if WinActive("Visual Studio Code") {
-    clipboard = %VSCode%
-    ClipWait, 0
     Send {Enter}
-    Send ^v
+    SendInput, %VSCode%
+    sleep %slowTime%
     Send {Enter}
 }
 else {
-    clipboard = %GeneralCB%
-    ClipWait, 0
     Send {Enter}
-    Send ^v
+    SendInput, %GeneralCB%
+    sleep %slowTime%
     Send {Enter}
 }
-;restore the clipboard contents
-; Clipboard = %old_clip%
-ClipWait, 2
