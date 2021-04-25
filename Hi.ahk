@@ -1,10 +1,10 @@
 slowTime = 25
 
 ; Set a bunch of text variables
-GiantGuild := "Radar? We don't have that... but I see something to dps down on me."
-Destiny := "I see them on my radar!"
-VSCode := "WHY ARE YOU DOING THIS HERE?!?!"
-GeneralCB := "GG"
+GiantGuild := "Hi"
+Destiny := "Hi"
+VSCode := "Hi"
+GeneralCB := "Hi"
 
 if WinActive("Destiny 2") {
     Send {Enter}
