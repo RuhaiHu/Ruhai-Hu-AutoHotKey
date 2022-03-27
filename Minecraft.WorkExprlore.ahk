@@ -6,7 +6,7 @@ Command2 := "/gamerule doDaylightCycle false"
 Command3 := "/gamerule spectatorsGenerateChunks true"
 Command4 := "/time set day"
 
-if WinActive("Minecraft*") {
+if WinActive("Minecraft") {
     Send t
     sleep %slowTime%
     SendInput, %Command1%
